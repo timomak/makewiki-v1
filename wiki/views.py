@@ -5,7 +5,7 @@ from django.views.generic.detail import DetailView
 from django.http import HttpRequest
 
 def index(request):
-    # TODO: render latest.html
+    # return render(request, 'wiki/templates/base.html')
     return HttpRequest("Hello World!")
 
 class PageList(ListView):
@@ -22,10 +22,11 @@ class PageList(ListView):
     """
     model = Page
     template_name = 'wiki/list.html'
+    context_object_name = 'page_list'
 
-    def get(self, request):
+    def get_queryset(self):
         """ Returns a list of wiki pages. """
-        return Page.object.all()
+        return Page.objects.order_by('-created')[:5]
 
 
 class PageDetailView(DetailView):

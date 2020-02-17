@@ -12,8 +12,9 @@ from . import views
   """
 
 urlpatterns = [
-    path('', views.index, name='wiki-list-page'),
-    path('/list', views.PageList.as_view(), name='wiki-list-page'),
+    # path('', views.index, name='index'),
+    path('list/', views.PageList.as_view(), name='wiki-list-page'),
+    path('list/<int:page.id>/', views.PageDetailView.as_view(), name='wiki-details-page')
     # path('REPLACE_ME_WITH_ROOT_ROUTE', REPLACE_ME_WITH_VIEW.as_view(), name='wiki-list-page'),
     # path('REPLACE_ME_WITH_SLUG', REPLACE_ME_WITH_VIEW.as_view(), name='wiki-details-page'),
 ]
