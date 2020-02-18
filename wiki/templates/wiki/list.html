@@ -4,13 +4,7 @@
 	<h3>
 		Wikis
 		{% if pages %}
-			<small class="text-muted">
-				(
-				{{ pages|length }}
-				Page
-				{{ pages|length|pluralize:"s" }}
-				)
-			</small>
+			<small class="text-muted">({{ pages|length }} Page{{pages|length|pluralize:"s"}})</small>
 		{% endif %}
 	</h3>
 	<hr />
