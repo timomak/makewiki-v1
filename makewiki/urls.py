@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from accounts import views
 
 """
 CHALLENGES:
@@ -28,6 +30,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Wiki App
-    path('', include('wiki.urls'))
+    path('', include('wiki.urls')),
     # path('REPLACE_ME_WITH_ROUTE', include(REPLACE_ME_WITH_APP_URLS)),
+
+    # Accounts
+	path('accounts/', include('django.contrib.auth.urls')),
+
+
+    url(r'^accounts/',include('accounts.urls')),
+    url(r'^$', views.index,name='index'),
+    url(r'^special/',views.special,name='special'),
+
+    url(r'^logout/$', views.user_logout, name='logout'),
 ]
