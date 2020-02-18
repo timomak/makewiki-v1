@@ -1,3 +1,5 @@
+Link: https://github.com/Make-School-Labs/makewiki-starter/blob/master/CHALLENGES.md#signup
+
 # 📓 Personal Wiki
 
 ## Step 1: Follow Setup Guide
@@ -49,7 +51,7 @@ You will also need to create templates in `wiki/templates/wiki` for use with you
 
 ### Suggestions
 
-- Create a beautiful user interface for your wiki. [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/) is included with this starter pack! 
+- Create a beautiful user interface for your wiki. [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/) is included with this starter pack!
 - Customize the project and continue to experiment with the codebase.
 - Make the models more sophisticated.
 - What other features can you dream up? What would look good on your portfolio? Open up a discussion with your instructor to receive personalized feedback.
