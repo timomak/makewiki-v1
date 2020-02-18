@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Login URL
+LOGIN_URL = 'accounts/login/'
 
 # Application definition
 
@@ -87,6 +89,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'wiki.sqlite3'),
     }
 }
+
+# Logout route
+DEFAULT_LOGOUT_URL = '/'
 
 
 # Password validation

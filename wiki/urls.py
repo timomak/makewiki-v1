@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 from wiki.views import PageList, PageDetailView
 
@@ -16,7 +16,8 @@ from wiki.views import PageList, PageDetailView
 urlpatterns = [
     # path('', views.index, name='index'),
     path('', PageList.as_view(), name='wiki-list-page'),
-    path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page')
+    path('<str:slug>/', PageDetailView.as_view(), name='wiki-details-page'),
+    path('accounts/', include('django.contrib.auth.urls')),
     # path('REPLACE_ME_WITH_ROOT_ROUTE', REPLACE_ME_WITH_VIEW.as_view(), name='wiki-list-page'),
     # path('REPLACE_ME_WITH_SLUG', REPLACE_ME_WITH_VIEW.as_view(), name='wiki-details-page'),
 ]
