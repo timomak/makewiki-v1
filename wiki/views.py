@@ -4,6 +4,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.http import HttpRequest
 
+app_name = "wiki"
 def index(request):
     # return render(request, 'wiki/templates/base.html')
     return HttpRequest("Hello World!")

@@ -3,13 +3,11 @@
 		{{ page.title }}
 	</h5>
 	<div class="card-body border-dark">
-		<p class="card-text text-dark">
-			{{ page.content|truncatewords_html:30 }}
-			<hr />
+		<p class="card-text text-dark">{{ page.content|truncatewords_html:30 }}</p>
 			<div class="text-right">
-				<a href="%{ url 'wiki-details-page' page.title }%" title="Read More">Read More</a>
+				<a href="{% url 'wiki-details-page' page.slug %}" title="Read More">Read More</a>
 			</div>
-		</p>
+
 	</div>
 	<div class="card-footer">
 		<small class="text-muted">
